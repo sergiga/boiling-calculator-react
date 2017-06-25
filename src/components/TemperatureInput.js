@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class TemperatureInput extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+export default function TemperatureInput(props) {
+  return (
+    <fieldset>
+      <legend>Set the temperature in { props.scale }</legend>
+      <input type="text" name = {props.scale } onChange = { (e) => {
+          props.onTemperatureChange(e.target.name, e.target.value)
+        } 
+      } />
+    </fieldset>
+  )
 }
