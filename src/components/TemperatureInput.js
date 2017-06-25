@@ -1,9 +1,14 @@
 import React from 'react'
 
+const scaleNames = {
+  c: 'Celsius',
+  f: 'Fahrenheit'
+}
+
 export default function TemperatureInput(props) {
   return (
     <fieldset>
-      <legend>Set the temperature in { props.scale }</legend>
+      <legend>Set the temperature in { scaleNames[props.scale] }</legend>
       <input 
         type="text" 
         name = { props.scale }

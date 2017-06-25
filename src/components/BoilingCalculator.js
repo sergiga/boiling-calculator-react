@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import TemperatureInput from './TemperatureInput.js'
+import TemperatureInput from './TemperatureInput'
+import BoilingVeredict from './BoilingVeredict'
 
 function convertTemperature(temperature, converter) {
   const input = parseFloat(temperature)
@@ -61,6 +62,9 @@ export default class BoilingCalculator extends Component {
           scale = 'f'
           temperature = { fahrenheit }
           onTemperatureChange = { this.onTemperatureChange } 
+        />
+        <BoilingVeredict
+          temperature = { celsius }
         />
       </div>
     )
