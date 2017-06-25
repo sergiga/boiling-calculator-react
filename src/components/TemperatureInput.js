@@ -4,7 +4,11 @@ export default function TemperatureInput(props) {
   return (
     <fieldset>
       <legend>Set the temperature in { props.scale }</legend>
-      <input type="text" name = {props.scale } onChange = { (e) => {
+      <input 
+        type="text" 
+        name = { props.scale }
+        value = { props.temperature } 
+        onChange = { (e) => {
           props.onTemperatureChange(e.target.name, e.target.value)
         } 
       } />
